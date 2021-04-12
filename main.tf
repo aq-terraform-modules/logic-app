@@ -53,19 +53,13 @@ resource "azurerm_resource_group_template_deployment" "example" {
                 "displayName": "Test",
                 "customParameterValues": {},
                 "api": {
-                    "id": "[concat('/subscriptions/7bd03bca-6ad8-4e23-87e7-88457e614216/providers/Microsoft.Web/locations/', parameters('location'), '/managedApis/', parameters('connections_sql_name'))]"
+                    "id": "[concat('/subscriptions/7bd03bca-6ad8-4e23-87e7-88457e614216/providers/Microsoft.Web/locations/southeastasia/managedApis/', parameters('connections_sql_name'))]"
                 },
-                "parameterValues": {
-                  "server": "msql-vidm.database.windows.net",
-                  "database": "LMK_Deployment",
-                  "username": "haladmin",
-                  "password": "haladmin",
-                   "authType": "basic",
-                }
             }
         }
     ]
 }
+
 TEMPLATE
 
   // NOTE: whilst we show an inline template here, we recommend
