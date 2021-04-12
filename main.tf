@@ -22,8 +22,4 @@ resource "azurerm_logic_app_trigger_recurrence" "logicapptrigger" {
   logic_app_id = azurerm_logic_app_workflow.logicappwf.id
   frequency    = "Day"
   interval     = 1
-  
-  lifecycle {
-    ignore_changes  = [tags]
-  }
 }
