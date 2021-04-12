@@ -28,11 +28,6 @@ resource "azurerm_resource_group_template_deployment" "example" {
   name                = "${var.logic_app_name}-sqlconnection"
   resource_group_name = azurerm_resource_group.logicapprg.name
   deployment_mode     = "Incremental"
-  parameters_content = jsonencode({
-    "vnetName" = {
-      value = local.vnet_name
-    }
-  })
   template_content = <<TEMPLATE
 {
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
