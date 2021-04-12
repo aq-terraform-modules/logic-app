@@ -54,7 +54,7 @@ resource "azurerm_resource_group_template_deployment" "example" {
                 "customParameterValues": {},
                 "api": {
                     "id": "[concat('/subscriptions/7bd03bca-6ad8-4e23-87e7-88457e614216/providers/Microsoft.Web/locations/southeastasia/managedApis/', parameters('connections_sql_name'))]"
-                },
+                }
             }
         }
     ]
